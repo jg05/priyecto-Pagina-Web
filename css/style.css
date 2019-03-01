@@ -1,0 +1,79 @@
+header{
+    height: 700px;
+    
+}
+/* body{
+    background: rgba(0, 128, 0, 0.3);
+} */
+.banner{
+    background-image: url(../img/Fundacion-JBorja-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:0px;
+}
+.banner2{
+    background-image: url(../img/banner_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fondo1{
+    /* background: rgba(52, 96, 240, 0.5); */
+    /* background: rgba(0, 77, 0, 0.4); */
+    background: rgba(0, 0, 0, 0.5);
+    height: 700px;
+    width: 100%;;
+}
+
+.logo{
+    width: 80px;
+}
+
+.blockquote{
+    border-left: 3px solid white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    bottom:20%;
+    right: 20%;
+}
+
+
+.cont-circle{
+    border-radius: 50%;
+    padding: 12%;
+}
+
+
+
+.flex-container {
+    display: flex;
+    align-items: center;
+  }
+
+footer{
+    line-height: auto;
+}
+img{
+    -webkit-transition:all .9s ease; 
+-moz-transition:all .9s ease;
+-o-transition:all .9s ease; 
+-ms-transition:all .9s ease; 
+}
+.contenedorImg2{
+    overflow:hidden;
+}
+.contenedorImgP:hover img{
+    -webkit-transform:scale(1.25);
+    
+    transform:scale(1.25);
+}
+
+.franja{
+    border-left: 4px solid orange;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* .borde1{
+    border: 1px solid gray;
+    border-radius: 5px;
+} */
