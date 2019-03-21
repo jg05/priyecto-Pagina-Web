@@ -10,76 +10,143 @@
     <script src="js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/axios.min.js"></script>
 </head>
 <body>
     <section class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+        <!-- inicio del menu -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-menu sticky-top">
+            <a class="navbar-brand" href="index.html">
                 <img src="img/CDS_2016-01.png" alt="" class="rounded logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
+            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- links del menu -->
                 <ul class="navbar-nav ml-auto p-2">
-                <li class="nav-item active">
-                    <a class="nav-link active" href="index.html">Inicio<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="quienes_somos.html">Quienes somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="galeria.html">Galería</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="noticias.html">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactanos.html">Contactanos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Iniciar Sesion</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li> -->
+                    <li class="nav-item ">
+                        <a class="nav-link " href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quienes_somos.html">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contactanos.html">Contactanos</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="login2-0.html">Iniciar Sesion</a>
+                    </li> -->
+                    <div id="Acceso"></div>
+                    <script src="js/menu.js"></script>
                 </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
             </div>
         </nav>
-        <header class="banner w-100 position-relative rounded">
+        <!-- fin del menu  -->
+        <header class="banner3 w-100 position-relative rounded baners">
             <section class="fondo1 rounded">
-                <blockquote class="blockquote col-6 mx-auto position-absolute">
-                    <cite class="text-white h2">“No se trata de ser los más rápidos, los más fuertes, o los más grandes. Se trata de ser nosotros mismos.”  </cite>
-                    <footer class="text-white blockquote-footer">Kilian Jornet</footer>
+                <blockquote class="blockquote col-8 mx-auto position-absolute">
+                    <cite class="text-white h2">“Nunca eres demasiado viejo para establecer otro objetivo o para soñar un nuevo anhelo.”  </cite>
+                    <footer class="text-white blockquote-footer">C.S. Lewis.</footer>
                 </blockquote>
             </section>
         </header>
-        <article class="container pt-4">
-            <h3 class="text-center text-uppercase">Requisitos para ser parte de Nosotros</h3>
-            <section clas></section>
-            <section>
-                <form action="">
-                    c
-                </form>
+        <article class="container pt-4  mt-5">
+            <!--  inicio de seccion de requisitos -->
+            <h3 class="text-center text-uppercase text-primary">Requisitos para ser parte de Nosotros</h3>
+            <section class="row border rounded">
+                <div class="col-md-6 p-3 border rounded">
+                    <ul>
+                        <li class="h5">Conocimientos básicos de computación.</li>
+                        <li class="h5">Vivir en Ahuachapán o en algunos de los municipios aledaños.</li>
+                        <li class="h5">Haber cursado mínimo 9° grado.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-3 border rounded">
+                    <ul>
+                        <li class="h5">Tener entre 16 y 29 años de edad cumplidos.</li>
+                        <li class="h5">Tener disponibilidad de tiempo y deseos de superación.</li>
+                        <li class="h5">Presentar DUI o carnet de minoridad y NIT.</li>
+                    </ul>
+                </div>
+                <!--  fin de seccion de requisitos -->
             </section>
+            <!--  inicio de formulario de contacto -->
+            <section class="mt-5 border row rounded">
+                <div class="col-md-6 rounded border">
+                    <h2 class="text-center col-12 mt-3 text-primary">Formulario de contacto</h2>
+                    <form action="" class="col-10 mx-auto mt-3">
+                        <article class="form-group ">
+                            <label for="">Nombre:</label>
+                            <input type="text" class="form-control" required readonly>
+                        </article>
+                        <article class="form-group ">
+                            <label for="">Correo electrónico:</label>
+                            <input type="email" class="form-control" required readonly>
+                        </article>
+                        <article class="form-group ">
+                            <label for="">Dirección:</label>
+                            <input type="text" class="form-control" required readonly>
+                        </article>
+                        <article class="form-group ">
+                            <label for="">Número de teléfono:</label>
+                            <input type="text" class="form-control" required readonly>
+                        </article>
+                        <article class="form-group ">
+                            <label for="">Comentarios:</label>
+                            <textarea name="" id="" cols="30" rows="2" class="form-control" readonly></textarea>
+                        </article>
+                        <article class="form-group">
+                            <input type="submit" class="btn btn-primary p-2" value="Enviar">
+                        </article>
+                    </form>
+                </div>
+                
+                <section class="col-md-6 border rounded p-3">
+                    <h2 class="text-center col-12 text-primary">Nuestra Ubicación</h2>
+                    <article class="col-12 text-center mt-4 mt-4">
+                        <!--  direccion de mapa de ubicacion -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.6165245844554!2d-89.84697954176869!3d13.92185480466998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6297ead7422433%3A0x51aee3a4185967c!2sFundaci%C3%B3n+JBorja!5e0!3m2!1ses-419!2ssv!4v1551714697259"  height="400" class="border rounded w-100" style="border:0" allowfullscreen></iframe>
+                    </article>
+                </section>
+            </section>
+            <!--  fin de formulario de contacto -->
+
+            
+            
+        </article>
+        <article class="mt-5 col-md-5 mx-auto">
+            <section class="row mt-4 mx-auto">
+                <div class="col-md-4">
+                    <h5>Escribenos a:</h5>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="alert-link">info@proyectosfgk.org</h5>
+                </div>
+            </section>
+            <section class="row mt-4 mx-auto">
+                <div class="col-md-4">
+                    <h5>Teléfono:</h5>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="alert-link">7225-8468</h5>
+                </div>
+            </section>
+            <!-- <p>Escribenos a: </p>
+            <p>Teléfono: 7225-8468</p> -->
         </article>
 
         <!--  Pie de la pagina-->
-        <footer class="col-12 mt-5 bg-info p-4 rounded mb-2">
-            <p class="text-center h6">COPYRIGHT © 2019 <a href="index.html" class=text-dark>Centro de Desarrollo de Software</a>  - TODOS LOS DERECHOS RESERVADOS </p>
+        <footer class="col-12 mt-5 piePagina p-4 rounded mb-2">
+            <p class="text-center h6 text-light">COPYRIGHT © 2019 <a href="index.html" class="text-light">Centro de Desarrollo de Software</a>  - TODOS LOS DERECHOS RESERVADOS.</p>
         </footer>
     </section>
 </body>

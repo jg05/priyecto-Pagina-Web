@@ -1,79 +1,148 @@
-header{
-    height: 700px;
-    
-}
-/* body{
-    background: rgba(0, 128, 0, 0.3);
-} */
-.banner{
-    background-image: url(../img/Fundacion-JBorja-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:0px;
-}
-.banner2{
-    background-image: url(../img/banner_2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.fondo1{
-    /* background: rgba(52, 96, 240, 0.5); */
-    /* background: rgba(0, 77, 0, 0.4); */
-    background: rgba(0, 0, 0, 0.5);
-    height: 700px;
-    width: 100%;;
+body {
+    background: whitesmoke;
+    /* background: rgb(71, 121, 168); */
 }
 
-.logo{
+
+header {
+   /* height: 700px;*/
+     height: 100%; 
+}
+
+/* Color de letras del menu  */
+.navbar-light .navbar-nav .nav-link {
+    /* color: rgba(0,0,0,0.5); */
+    /* color: white; */
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(8, 116, 8);
+}
+
+/*  hover al menu */
+link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    padding-left: 15px;
+    border-radius: 20px;
+    /* background: w7n ; */
+    /* color: rgb(255, 255, 255) !important;  */
+    color: rgb(3, 3, 3) !important; 
+}
+
+.bg-menu {
+    /* background:  rgba(0, 100, 0, 0.9); */
+    background:  rgb(255, 255, 255);
+}
+
+/* .active a {
+    color: orange !important;
+} */
+
+        /*  Seccion de banners para las paginas web */
+
+/* banner de index */
+.banner {
+    height: 800px;
+    background-image: url(../img/Fundacion-JBorja-1.jpg);
+}
+
+/* banner de quienes somos */
+.banner2 {
+    height: 800px;
+    background-image: url(../img/banner_2.jpg);
+}
+
+/* banner de contactanos */
+.banner3 {
+    height: 800px;
+    background-image: url(../img/banner_3.jpg);
+}
+.banner4 {
+    height: 800px;
+    background-image: url(../img/banner_4.jpg);
+}
+
+/**/
+.baners {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.h1s {
+    color: rgb(32, 109, 182) !important;
+}
+
+.botns {
+    background-color: rgb(11, 85, 155) !important;
+}
+/* fin de seccion de banner */
+
+/*  fondo negro transparente de banner */
+.fondo1 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*  ancho del logo del menu */
+.logo {
     width: 80px;
 }
 
-.blockquote{
+.log-b {
+    background-color: black;
+}
+
+/* coloca la frase del banner */
+.blockquote {
+    bottom:20%;
+    right: 20%;
     border-left: 3px solid white;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    bottom:20%;
-    right: 20%;
 }
 
-
-.cont-circle{
+/* .cont-circle{
     border-radius: 50%;
     padding: 12%;
-}
-
-
-
-.flex-container {
+} */
+/* centra imagen del logo verticalmente */
+/* .flex-container {
     display: flex;
     align-items: center;
-  }
+  } */
 
-footer{
-    line-height: auto;
-}
-img{
+/*  animacion de imagen (transicion lenta) */
+img {
+    -o-transition:all .9s ease; 
+    -ms-transition:all .9s ease;
+    -moz-transition:all .9s ease;
     -webkit-transition:all .9s ease; 
--moz-transition:all .9s ease;
--o-transition:all .9s ease; 
--ms-transition:all .9s ease; 
 }
-.contenedorImg2{
+.contenedorImg2 {
     overflow:hidden;
 }
-.contenedorImgP:hover img{
-    -webkit-transform:scale(1.25);
-    
+
+/* Al pasar el mouse sobre el contenedor hace zoom img */
+.contenedorImgP:hover img {
     transform:scale(1.25);
+    -webkit-transform:scale(1.25);
 }
 
-.franja{
-    border-left: 4px solid orange;
+/* franja anaranjada de izquierda de texto */
+.franja {
     border-top-left-radius: 10px;
+    border-left: 4px solid orange;
     border-bottom-left-radius: 10px;
 }
 
-/* .borde1{
-    border: 1px solid gray;
-    border-radius: 5px;
-} */
+/*  clase para login */
+.fondoLogin {
+    background: rgb(255, 255, 255); 
+}
+
+/* clase para pie de pagina */
+.piePagina {
+   background: rgb(58, 56, 56);
+}

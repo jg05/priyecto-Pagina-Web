@@ -10,11 +10,14 @@
     <script src="js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/axios.min.js"></script>
 </head>
 <body>
-    <section class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+    <section>
+        <!-- inicio del menu -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <!-- imagen de logo  -->
+            <a class="navbar-brand" href="index.html">
                 <img src="img/CDS_2016-01.png" alt="" class="rounded logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,6 +25,7 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- links del menu -->
                 <ul class="navbar-nav ml-auto p-2">
                 <li class="nav-item active">
                     <a class="nav-link active" href="index.html">Inicio<span class="sr-only">(current)</span></a>
@@ -29,39 +33,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="quienes_somos.html">Quienes somos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="galeria.html">Galería</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="noticias.html">Noticias</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contactanos.html">Contactanos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Iniciar Sesion</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="login2-0.html">Iniciar Sesion</a>
                 </li> -->
+                <div id="Acceso"></div>
+                <script src="js/menu.js"></script>
                 </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
+                
             </div>
         </nav>
-        <header class="banner w-100 position-relative rounded">
-            <section class="fondo1 rounded">
-                <blockquote class="blockquote col-6 mx-auto position-absolute">
+        <!-- fin del menu -->
+        <header class="banner w-100 position-relative baners">
+            <section class="fondo1">
+                <blockquote class="blockquote col-8 mx-auto position-absolute">
                     <cite class="text-white h2">“No se trata de ser los más rápidos, los más fuertes, o los más grandes. Se trata de ser nosotros mismos.”  </cite>
                     <footer class="text-white blockquote-footer">Kilian Jornet</footer>
                 </blockquote>
@@ -77,36 +68,42 @@
                 </p>
            </section> -->
             <!-- fin de Seccion circular -->
-           <h1 class="text-center text-uppercase">Ultimas Noticias</h1>
+           <h1 class="text-center text-uppercase text-primary h1s">Ultimas Noticias</h1>
            <!-- inicio de Seccion de ultimas noticias de pagina de inicio -->
            <section class="row">
-               <article class="col-md-4 mt-4">
+               <article class="col-md-4 mt-4 contenedorImgP">
                     <div class="card w-100">
-                        <img src="img/CDS-CIERRE-3.jpg" class="card-img-top" alt="...">
+                        <div class="contenedorImg2">
+                            <img src="img/CDS-CIERRE-3.jpg" class="card-img-top" alt="">
+                        </div>
                         <div class="card-body">
                             <!-- <h5 class="card-title">Card title</h5> -->
-                            <p class="card-text text">Programación, la nueva herramienta de trabajo de los jóvenes de Ahuachapán.</p>
-                            <a href="#" class="btn btn-primary">Leer más</a>
+                            <p class="card-text ">Programación, la nueva herramienta de trabajo de los jóvenes de Ahuachapán.</p>
+                            <a href="#" class="btn btn-primary botns">Leer más</a>
                         </div>
                     </div>
                 </article>
                 <article class="col-md-4 mt-4">
-                    <div class="card w-100">
-                        <img src="img/5.jpg" class="card-img-top" alt="...">
+                    <div class="card w-100 contenedorImgP">
+                        <div class="contenedorImg2">
+                            <img src="img/5.jpg" class="card-img-top" alt="">
+                        </div>
                         <div class="card-body">
                             <!-- <h5 class="card-title">Card title</h5> -->
                             <p class="card-text">¡Estamos en continua innovación! CDS- DISEÑO WEB Y PROGRAMACIÓN EN AHUACHAPÁN.</p>
-                            <a href="#" class="btn btn-primary">Leer más</a>   
+                            <a href="#" class="btn btn-primary botns">Leer más</a>   
                         </div>
                     </div>
                 </article>
                 <article class="col-md-4 mt-4">
-                    <div class="card w-100">
-                        <img src="img/1mod.jpg" class="card-img-top" alt="...">
+                    <div class="card w-100 contenedorImgP">
+                        <div class="contenedorImg2">
+                            <img src="img/1mod.jpg" class="card-img-top" alt="">
+                        </div>
                         <div class="card-body">
                             <!-- <h5 class="card-title">Card title</h5> -->
                             <p class="card-text">Centros de desarrollo con un propósito.</p>
-                            <a href="#" class="btn btn-primary">Leer más</a>   
+                            <a href="#" class="btn btn-primary botns">Leer más</a>   
                         </div>
                     </div>
                 </article>
@@ -114,12 +111,12 @@
            <!-- fin de Seccion de ultimas noticias de pagina de inicio -->
 
            <section class="col-12 mt-5">
-                <h2 class="text-center text-uppercase">Fundaciones que nos apoyan:</h2>
+                <h2 class="text-center text-uppercase text-primary">Fundaciones que nos apoyan:</h2>
            </section>
            
-           <section class="col-6 col-md-4 row mx-auto col-sm-6">
-                <article class="col-sm-6 flex-container mt-4">
-                    <a href="https://fundacionjborja.org/"><img src="img/logo-fundacion-borja.png" alt="" class="w-100"></a> 
+           <section class="col-6 col-md-4 row mx-auto col-sm-6 mt-4">
+                <article class="col-sm-6 d-flex align-items-center mt-4">
+                    <a href="https://fundacionjborja.org/"><img src="img/logo-fundacion-borja.png" alt="" class="w-100 log-b"></a> 
                 </article>
                <article class="col-sm-6 text-center mt-4">
                     <a href="https://www.fundaciongloriakriete.org/"><img src="img/logo_gloriakriete.png" alt="" class="w-50"></a>
@@ -128,8 +125,8 @@
         </article>
 
         <!--  Pie de la pagina-->
-        <footer class="col-12 mt-5 bg-info p-4 rounded mb-2">
-            <p class="text-center h6">COPYRIGHT © 2019 <a href="index.html" class=text-dark>Centro de Desarrollo de Software</a>  - TODOS LOS DERECHOS RESERVADOS </p>
+        <footer class="col-12 piePagina p-4 mt-4">
+            <p class="text-center h6 text-light">COPYRIGHT © 2019 <a href="index.html" class=text-light>Centro de Desarrollo de Software</a>  - TODOS LOS DERECHOS RESERVADOS </p>
         </footer>
     </section>
 </body>

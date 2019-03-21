@@ -1,0 +1,161 @@
+/*body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #32486e;
+    font-family: sans-serif;
+}*/
+::selection {
+    background: #07790c;
+    color: aliceblue;
+}
+/* Login -*-*-*-*-*-*-*-*-*-*-*/
+    .container {
+        box-shadow: 7px 7px 12px 0px  #0c0c0c42;
+    }
+    .login-container {
+        background: #e6e6e6;
+        height: 75vh;
+    }
+    .img-container {
+        background: #161616b4;
+        background-image: url("../img/img-3.1.jpg");
+        height: 75vh;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+    .img-container .etiqueta {
+        width: 175px;
+        margin-top: 20px;
+        margin-left: -30px !important;
+        position: absolute;
+        z-index: 99;
+    }
+    .form-container {
+        background: #e6e6e6; /*#d92525 ROJO*/ /*#065d0a VERDE*/ /*#f8a219 AMARILLO*/
+        height: 75vh;
+    }
+    .form-container .text-container {
+        margin: 80px;
+    }
+    .form-container form {
+        width: 100%;
+        margin-top: 10vh;
+    }
+    .form-container form .input-cont {
+        margin: 30px;
+    }
+    .form-container form .input {
+        margin: 10px;
+        height: 40px;
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #065d0a;
+        outline: none;
+        background: none;
+        transition: .3s ;
+        position: relative;
+        z-index: 222;
+    }
+
+    /* iconos que permiten mostrar/ocultar la contraseña */
+    .icon-see-pass {
+        position: absolute;
+        margin-left: -5%;
+        margin-top: 20px;
+        z-index: 333;
+        color: #065d0a;
+    }
+
+    .icon-see-user, .icon-see-lock{
+        color: #065d0a;
+    }
+    .icon-dont-see-pass {
+        position: absolute;
+        margin-left: -5%;
+        margin-top: 20px;
+        z-index: 444;
+        color: #065d0a;
+    }
+    i {
+        font-size: 20px !important;
+    }
+ 
+    .form-container form .input::placeholder {
+        color: #065d0a;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+        'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+        Verdana, sans-serif;
+    }
+    .form-container form .input:focus::placeholder {
+        color: #f8a219;
+    }
+    .form-container form .input:focus {
+        border-bottom: 1px solid #f8a219;
+        /* width: 275px; */
+    }
+
+    .form-check {
+        margin-top: -30px;
+    }
+    .btn-container a {
+        color: #d92525 !important;
+        border-radius: 3px !important;
+        border: 1px solid #d92525;
+        background: rgba(32, 85, 178, 0) !important;
+        transition: .4s !important;
+    }
+    .btn-container a:hover {
+        color: #ffffff !important;
+        background: #d92525 !important;
+        /*border-color: #07790c !important;*/
+        transition: .4s !important;
+    }
+
+    @media screen and (max-width:991px) {
+        .img-container {
+            background: #161616ce;
+            background-image: url("../img/img-4.jpg");
+            background-size: cover;
+            background-position: 0px -150px;
+            height: 40vh;
+            top: 0;
+            left: 0;
+        }
+        .form-container form .input:focus {
+            border-bottom: 1px solid #d16202;
+            /* width: 275px; */
+        }
+    }
+    @media screen and (max-width:768px) {
+        .img-container {
+            background-size: cover;
+            background-position: 0px -40px;
+        }
+        .form-container {
+            min-height: 100vh;
+            height: auto;
+        }
+        .icon-see-pass, .icon-dont-see-pass {
+            margin-left: -6%;
+        }
+        .form-container form .input {
+            margin: 5px;
+            height: 40px;
+            width: 250px;
+            border: none;
+            border-bottom: 1px solid #1e4d9f;
+            outline: none;
+            background: none;
+            transition: .3s ;
+            position: relative;
+            z-index: 222;
+        }
+        .btn-container {
+            margin-bottom: 100px !important;
+        }
+    }

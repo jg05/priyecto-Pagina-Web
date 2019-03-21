@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" type="image/png" href="img/icono-desarrollo-software-08.ico" /> -->
+    <title>(En desarrollo) Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap v4.0.0 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Sketch (Plugin) -->
+    <script src="js/sketch.min.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/login.css">
+    <!--ESTILOS DE LA PAGINA ORIGINAL-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <!-- script para conectarse a servidor -->
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+
+</head>
+
+<body>
+    <!-- inicio del menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <!-- imagen de logo  -->
+        <a class="navbar-brand" href="index.html">
+            <img src="img/CDS_2016-01.png" alt="" class="rounded logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- links del menu -->
+            <ul class="navbar-nav ml-auto p-2">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quienes_somos.html">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactanos.html">Contactanos</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="login2-0.html">Iniciar Sesion</a></li>
+                <script>
+                    // var acc=sessionStorage.getItem("acceso");
+                    // if (acc!="" && acc!=null) {
+                        
+                    // }else{
+                    //     document.write('<li class="nav-item"><a class="nav-link" href="login2-0.html">Iniciar Sesion</a></li>');
+                    // }
+                </script>
+                <!-- <div id="Acceso"></div>
+                <script src="js/menu.js"></script> -->
+                
+            </ul>
+        </div>
+    </nav>
+    <!----FIN BARRA DE NAVEGACION---->
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="img-container col-lg-6">
+                <img class="etiqueta" src="img/logo_desk.png">
+            </div>
+
+            <div class="form-container col-lg-6">
+                <div class="text-container">
+                    <h2 class="text-center" style="color: #065d0a" >Inisiar Sesion</h2>
+                </div>
+                <form action="" style="background:rgba(172, 167, 167, 0);" class="text-center" id="login">
+
+                    <div class="input-cont">
+                        <i class="fa fa-user icon-see-user" aria-hidden="true"></i>
+                        <!-- Input -->
+                        <input id="user" type="email" class="input" placeholder="Usuario" v-model="user">
+                        <!--<small id="emailHelp" class="form-text text-muted"><em>nombreUsuario@correo.com</em></small>-->
+                    </div>
+
+                    <div class="input-cont">
+                        <i class="fa fa-lock icon-see-lock" aria-hidden="true"></i>
+                        <!-- input -->
+                        <input id="pass" type="password" class="input pass" placeholder="Contraseña" v-model="pass">
+
+                        <i id="mostrar" class="fa fa-eye icon-see-pass" aria-hidden="true" onclick="mostrarPass()" data-toggle="tooltip" data-placement="top" title="Mostrar contraseña"></i>
+                        <i id="ocultar" class="fa fa-eye-slash icon-dont-see-pass" aria-hidden="true" onclick="ocultarPass()" data-toggle="tooltip" data-placement="left" title="Ocultar contraseña"></i>
+
+                    </div>
+                    <!--<div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label text-muted">
+                            <small>
+                                <em>Recordar contraseña</em>
+                            </small>
+                        </label>
+                    </div>-->
+                    <div class="mt-4 btn-container text-center">
+                        <a id="log-in" class="btn" v-on:click="login">
+                            Iniciar Sesión <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/cntrs.js"></script>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

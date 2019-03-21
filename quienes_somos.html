@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
     <script src="js/jQuery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/axios.min.js"></script>
 </head>
 <body>
     <section class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+        <nav class="navbar navbar-expand-lg navbar-light bg-menu sticky-top">
+            <a class="navbar-brand" href="index.html">
                 <img src="img/CDS_2016-01.png" alt="" class="rounded logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,45 +23,33 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto p-2">
-                <li class="nav-item ">
-                    <a class="nav-link " href="index.html">Inicio<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="quienes_somos.html">Quiénes somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="galeria.html">Galería</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="noticias.html">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactanos.html">Contactanos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Iniciar Sesion</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li> -->
+                    <li class="nav-item ">
+                        <a class="nav-link " href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="quienes_somos.html">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanos.html">Contactanos</a>
+                    </li>
+                    <div id="Acceso"></div>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="login2-0.html">Iniciar Sesion</a>
+                    </li> -->
+                    <script src="js/menu.js"></script>
                 </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
+
             </div>
         </nav>
-        <header class="banner2 w-100 position-relative rounded">
+        <header class="banner2 w-100 position-relative rounded baners">
             <section class="fondo1 rounded">
-                <blockquote class="blockquote col-6 mx-auto position-absolute">
+                <blockquote class="blockquote col-8 mx-auto position-absolute">
                     <cite class="text-white h2">"La única manera de hacer un gran trabajo, es amar lo que haces. Si no lo has encontrado, sigue buscando. No te conformes." </cite>
                     <footer class="text-white blockquote-footer">Steve Jobs</footer>
                 </blockquote>
@@ -73,11 +61,13 @@
 
             <!-- inicio de Mision-->
             <article class="border rounded row contenedorImgP mt-5 p-3">
-                <section class="col-md-5 contenedorImg2 rounded">
-                    <img src="img/mision.jpg" alt="" class="w-100">
+                <section class="col-md-5  rounded">
+                    <div class="contenedorImg2">
+                        <img src="img/mision.jpg" alt="" class="w-100">
+                    </div>
                 </section>
                 <section class="col-md-7">
-                    <h3 class="text-center text-uppercase">Misión</h3>
+                    <h3 class="text-center text-uppercase text-primary">Misión</h3>
                     <p class="text-justify franja pl-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque minima accusantium corrupti laudantium totam 
                         consectetur praesentium debitis quisquam! Non ex dolore officia rerum est hic iure ducimus quidem. Harum 
                         olores consequuntur aspernatur doloremque reiciendis sint rerum. Cumque sit eum consequuntur? Eaque mollitia 
@@ -88,11 +78,14 @@
             <!-- fin de Mision-->
             <!-- inicio de Vision-->
             <article class="border rounded row contenedorImgP  mt-5 p-3">
-                <section class="col-md-5 contenedorImg2 rounded">
-                    <img src="img/vision.jpg" alt="" class="w-100">
+                <section class="col-md-5  rounded">
+                    <div class="contenedorImg2">
+                        <img src="img/vision.jpg" alt="" class="w-100 rounded">
+                    </div>
+                    
                 </section>
                 <section class="col-md-7">
-                    <h3 class="text-center text-uppercase">Visión</h3>
+                    <h3 class="text-center text-uppercase text-primary">Visión</h3>
                     <p class="text-justify franja pl-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque minima accusantium corrupti laudantium totam 
                         consectetur praesentium debitis quisquam! Non ex dolore officia rerum est hic iure ducimus quidem. Harum 
                         olores consequuntur aspernatur doloremque reiciendis sint rerum. Cumque sit eum consequuntur? Eaque mollitia 
@@ -103,29 +96,33 @@
             <!-- fin de vision-->
             <!-- inicio de Valores-->
             <article class="mt-4 row border rounded">
-                <h2 class="text-center col-12 text-uppercase">Nuestros Valores</h2>
+                <h2 class="text-center col-12 text-uppercase text-primary">Nuestros Valores</h2>
                 <div class="row mt-4 col-12">
+                        <!-- inicio lista de Valores internos-->
                     <section class="col-md-6 ">
-                        <h3 class="text-center">Valores Internos</h3>
+                        <h3 class="text-center text-primary">Valores Internos</h3>
                         <ul class="franja">
-                            <li>Pro-actividad</li>
-                            <li>Responsabilidad</li>
-                            <li>Liderazgo a través de la acción</li>
-                            <li>Cooperación</li>
-                            <li>Trabajo en equipo</li>
-                            <li>Integridad</li>
+                            <li>Pro-actividad.</li>
+                            <li>Responsabilidad.</li>
+                            <li>Liderazgo a través de la acción.</li>
+                            <li>Cooperación.</li>
+                            <li>Trabajo en equipo.</li>
+                            <li>Integridad.</li>
                         </ul>
                     </section>
+                    <!-- fin de valores internos -->
+                        <!-- inicio lista de Valores esternos-->
                     <section class="col-md-6 ">
-                        <h3 class="text-center">Valores Externos</h3>
+                        <h3 class="text-center text-primary">Valores Externos</h3>
                         <ul class="franja">
-                            <li>Transparencia</li>
-                            <li>Aprender haciendo</li>
-                            <li>Pasión por la excelencia</li>
-                            <li>Innovación</li>
-                            <li>Compromiso y Responsabilidad</li>
+                            <li>Transparencia.</li>
+                            <li>Aprender haciendo.</li>
+                            <li>Pasión por la excelencia.</li>
+                            <li>Innovación.</li>
+                            <li>Compromiso y Responsabilidad.</li>
                         </ul>
                     </section>
+                    <!-- fin de valores externos -->
                 </div>
                 
             </article>
@@ -135,8 +132,8 @@
         <!-- fin de cuerpo de la pagina-->
     
         <!--  Pie de la pagina-->
-        <footer class="col-12 mt-5 bg-info p-4 rounded mb-2">
-            <p class="text-center h6">COPYRIGHT © 2019 <a href="index.html" class=text-dark>Centro de Desarrollo de Software</a>  - TODOS LOS DERECHOS RESERVADOS </p>
+        <footer class="col-12 mt-5 piePagina p-4 rounded mb-2">
+            <p class="text-center h6 text-light">COPYRIGHT © 2019 <a href="index.html" class="text-light">Centro de Desarrollo de Software</a>  - TODOS LOS DERECHOS RESERVADOS.</p>
         </footer>
     </section>
 </body>

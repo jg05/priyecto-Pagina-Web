@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eventos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+</head>
+<body>
+    <section class="container">
+        <article id="eventos">
+                <p>{{nombre}}</p>
+            <div class="row">
+                <section class="col-md-4 col-sm-6 mt-4" v-for="actual in info.eventos">
+                    <base-eventos v-bind:titulo="actual.titulo"  v-bind:cuerpo="actual.contenido"  v-bind:id="actual.id"></base-eventos>
+                </section>
+                
+            </div>
+           
+        </article>
+    </section>
+    <script>
+
+        Vue.component('base-eventos', {
+        props: ['titulo', 'cuerpo','id'],
+        template: `
+        <div class="card w-100">
+            <img src="http://www.grorion.com/sites/default/files/eventos%20copia%20%281%29.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+                
+                <h5 class="card-title">{{titulo}}</h5>
+                <p class="card-text">{{cuerpo.substring(0,200)}} ...</p>
+                <a class="btn btn-primary text-light" @click="window.location='verEvento.html?='+id">Leer más</a>
+                <button class="btn btn-primary text-light" @click="as(id)">Leer menos</button>
+            </div>
+        </div>`,
+        methods:{
+            as: function (id) {
+                // alert('id '+ id);
+                axios.get('http://192.168.32.106/Publicaciones_eventos/apiRest/public/api/eventos/verID?id='+id)
+                .then(response => {
+                    nombre= response.data.dato
+                // this.info = response.data;
+                })
+                .catch(error => {
+                console.log(error)
+                })
+            }
+        }
+        });
+
+        // function as(id) {
+        //     //alert('id '+ id);
+        //     axios.get('http://192.168.32.106/Publicaciones_eventos/apiRest/public/api/eventos/verID?id='+id)
+        //     .then(response => {
+        //         nombre= response.data.dato
+        //     // this.info = response.data;
+        //     })
+        //     .catch(error => {
+        //     console.log(error)
+        //     })
+        //}
+
+
+        new Vue({
+            el: "#eventos",
+            data:{
+                info:"",
+                nombre:""
+            },
+            mounted () {
+                axios.get('http://192.168.32.106/Publicaciones_eventos1/apiRest/public/api/eventos/lista')
+                .then(response => {
+                this.info = response.data;
+                })
+                .catch(error => {
+                console.log(error)
+
+                })
+            }
+        });
+    </script>
+</body>
+</html>

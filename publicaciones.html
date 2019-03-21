@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Publicaciones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/axios.min.js"></script>
+</head>
+<body>
+    <section class="container">
+        <article class="row" id="publicacion"></article>
+    </section>
+    <script>
+    $(document).ready(inicio);
+    function inicio() {
+        axios.get('http://192.168.32.106/Publicaciones_eventos1/apiRest/public/api/publicaciones/lista')
+        .then(response => {
+            // console.log(response.data.eventos.length);
+            var cadena="";
+            
+            for (let i = 0; i < response.data.publicaciones.length; i++) {
+                var cuerpo="";
+                for (let a = 0; a < response.data.publicaciones[i].contenido.length; a++) {
+                    if (a<=200) {
+                        cuerpo=cuerpo+response.data.publicaciones[i].contenido[a];
+                    }
+                   
+                }
+                cadena=cadena+'<section class="col-md-4 col-sm-6 mt-5"><div class="card w-100" >'+
+                                '<img src="'+response.data.publicaciones[i].img+'" class="card-img-top w-100" alt="">'+
+                                '<div class="card-body">'+
+                                    '<h5 class="card-title">'+response.data.publicaciones[i].titulo+'</h5>'+
+                                    '<p class="card-text">'+cuerpo+'...</p>'+
+                                    '<a href="#" class="btn btn-primary">Go somewhere</a>'+
+                                '</div>'+
+                            '</div></section>';
+                
+            }
+            $("#publicacion").html(cadena);
+            
+        })
+        .catch(error => {
+            console.log(error);
+        //window.location="login2-0.html"; 
+        });
+    }
+    </script>
+</body>
+</html>
